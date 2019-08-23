@@ -3,9 +3,13 @@
     height: 100%;
 }
 
+.title {
+    color: #5A5A5A;
+}
+
 .month-calendar .day {
     height: 120px;
-    border: 1px solid #CCC;
+    border: 1px solid #EAEAEA;
     width: 100%;
     padding: 0.5rem;
 }
@@ -13,4 +17,14 @@
 .header {
     display: flex;
     justify-content: space-between;
+    padding: 0.5rem;
+}
+
+.button {
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    width: 200px;
+    border: none;
+    background-color: #F5F5F5;
+    color: #5A5A5A;
 }
