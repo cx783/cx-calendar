@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# CX-CALENDAR
+
+A simple calendar example with react and react hooks
 
 ## Available Scripts
 

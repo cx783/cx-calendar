@@ -1,4 +1,4 @@
-import { startOfMonth, endOfMonth, getDate, startOfWeek, endOfWeek, isBefore, differenceInDays, addDays, addWeeks } from 'date-fns';
+import { startOfMonth, endOfMonth, startOfWeek, isBefore, differenceInDays, addDays, addWeeks } from 'date-fns';
 
 export function daysOnMonth(startDate) {
   const endDate = endOfMonth(startDate);
