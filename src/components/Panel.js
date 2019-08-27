@@ -11,7 +11,8 @@ function getStyle(top, left, leftCriteriaWidth) {
         border: `1px solid #DDD`,
         boxShadow: '0px 5px 10px rgba(0,0,0,0.2)',
         width: `${leftCriteriaWidth}px`,
-        boxSizing: 'border-box'
+        boxSizing: 'border-box',
+        display: 'flex'
     };
 }
 

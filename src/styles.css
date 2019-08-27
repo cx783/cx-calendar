@@ -26,6 +26,8 @@
   padding: 0.5rem 1rem;
   display: inline-block;
   border: none;
+  background: white;
+  color: #5A5A5A;
 }
 
 .button-small {
@@ -104,6 +106,12 @@
 .form-input {
   border: 1px solid #DADADA;
   padding: 0.5rem;
+  flex: 2;
+}
+
+/* FIXME: Improve right abstraction */
+.arrow-right {
+  flex-direction: row-reverse;
 }
 
 .arrow-right::before {
@@ -128,4 +136,12 @@
   left: -10px;
   top: 10px;
   position: absolute;
+}
+
+.current-date {
+  background-color: #a7eef5;
+  padding: 4px;
+  line-height: 20px;
+  border-radius: 50%;
+  font-size: 16px;
 }

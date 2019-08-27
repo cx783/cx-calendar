@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { format, getMonth } from 'date-fns';
+import { format, getMonth, isEqual, isSameDay } from 'date-fns';
 import TodoList from './TodoList';
 import Tooltip from './Tooltip';
 
@@ -11,6 +11,7 @@ export default (props) => {
   let parentRef = useRef(null);
 
   const inputRef = useRef();
+  const isNow = isSameDay(props.now, props.day);
 
   useEffect(() => {
     if (showAddTodoTooltip) {
@@ -18,16 +19,24 @@ export default (props) => {
     }
   })
 
-  const addNewTodo = () => {
-    props.addNewTodo({text: newTodo, date: props.day});
+  const reset = () => {
     setNewTodo('');
     setShowAddTodoTooltip(false);
+  }
+
+  const addNewTodo = () => {
+    props.addNewTodo({text: newTodo, date: props.day});
+    reset();
+  }
+
+  const cancel = () => {
+    reset();
   }
   
   return (
     <div className={`day ${inCurrentMonth ? 'inMonth' : 'inOtherMonth'}`} ref={parentRef}>
       <div>
-        {day}
+        <span className={`${isNow && 'current-date'}`}>{day}</span>
         {
           inCurrentMonth && 
           <button
@@ -48,6 +57,7 @@ export default (props) => {
           >
             Add todo
           </button>
+          <button className="button" onClick={() => cancel()}>Cancel</button>
         </Tooltip>}
     </div>
   );

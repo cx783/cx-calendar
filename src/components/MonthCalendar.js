@@ -8,6 +8,8 @@ export default (props) => {
     const [date, setDate] = useState(startOfMonth(props.date));
     const [todos, setTodos] = useState([]); 
     let [todoId, setTodoId] = useState(1);
+
+    const now = new Date();
     
     const month = getMonth(date);
     let weeks = weeksOnMonth(date);
@@ -33,6 +35,7 @@ export default (props) => {
                 deleteTodo={deleteTodo} 
                 key={index} 
                 addNewTodo={addNewTodo}
+                now={now}
             />
         );
     });

@@ -12,6 +12,7 @@ export default (props) => {
         todos={todos} key={index}
         deleteTodo={props.deleteTodo}
         addNewTodo={props.addNewTodo}
+        now={props.now}
       />
     );
   });
